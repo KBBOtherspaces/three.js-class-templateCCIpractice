@@ -37,13 +37,13 @@ scene.add(cube2);
 
 // cube 3
 const geometry3 = new THREE.BoxGeometry(2, 2, 2);
-geometry3.translate(4, 0, 0.8);
+geometry3.translate(3, 0, 0.8);
 const material3 = new THREE.MeshBasicMaterial({ color: 0xff0000 });
 const cube3 = new THREE.Mesh(geometry3, material3);
 scene.add(cube3);
 
 
-camera.position.z = 20;
+camera.position.z = 10;
 camera.position.y = 10;
 camera.up.set(0, 0, 2);
 camera.lookAt(0, 0, 0);
