@@ -45,7 +45,6 @@ scene.add(cube3);
 
 camera.position.z = 10;
 camera.position.y = 10;
-camera.up.set(0, 0, 2);
 camera.lookAt(0, 0, 0);
 
 function animate() {
