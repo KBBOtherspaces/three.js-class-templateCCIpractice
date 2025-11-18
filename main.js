@@ -18,7 +18,9 @@ const planeMaterial = new THREE.MeshBasicMaterial({
   color: 0x666666,
   side: THREE.DoubleSide,
 });
-const plane = new THREE.Mesh(planeGeometry, planeMaterial);
+const plane = new THREE.Mesh(planeGeometry,
+  planeMaterial);
+plane.rotation.x = -Math.PI / 2;
 scene.add(plane);
 
 // cube 1
@@ -43,7 +45,7 @@ const cube3 = new THREE.Mesh(geometry3, material3);
 scene.add(cube3);
 
 
-camera.position.z = 10;
+camera.position.x = 10;
 camera.position.y = 10;
 camera.lookAt(0, 0, 0);
 
