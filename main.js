@@ -24,31 +24,46 @@ plane.rotation.x = -Math.PI / 2;
 scene.add(plane);
 
 // cube 1
-const geometry1 = new THREE.BoxGeometry(3, 3, 3);
+const geometry1 = new THREE.BoxGeometry(2, 2, 2);
 geometry1.translate(0, 0, 0.5);
-const material1 = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+const material1 = new THREE.MeshBasicMaterial({ color: 0x7ed1f7 });
 const cube1 = new THREE.Mesh(geometry1, material1);
 scene.add(cube1);
 
 // cube 2
-const geometry2 = new THREE.BoxGeometry(1, 1, 1);
+const geometry2 = new THREE.BoxGeometry(1.25, 1.25, 1.25);
 geometry2.translate(2, 0, 0.5);
-const material2 = new THREE.MeshBasicMaterial({ color: 0xffc0cb });
+const material2 = new THREE.MeshBasicMaterial({ color: 0xd1f263 });
 const cube2 = new THREE.Mesh(geometry2, material2);
 scene.add(cube2);
 
 // cube 3
-const geometry3 = new THREE.BoxGeometry(2, 2, 2);
+const geometry3 = new THREE.BoxGeometry(1.75, 1.75, 1.75);
 geometry3.translate(3, 0, 0.8);
-const material3 = new THREE.MeshBasicMaterial({ color: 0xff0000 });
+const material3 = new THREE.MeshBasicMaterial({ color: 0xd955ed });
 const cube3 = new THREE.Mesh(geometry3, material3);
 scene.add(cube3);
 
+// cube 4
+const geometry4 = new THREE.BoxGeometry(2.25, 2.25, 2.25);
+geometry4.translate(4, 0, 0.8);
+const material4 = new THREE.MeshBasicMaterial({ color: 0xf2527d });
+const cube4 = new THREE.Mesh(geometry4, material4);
+scene.add(cube4);
+
 
 camera.position.x = 10;
-camera.position.y = 10;
-camera.lookAt(0, 0, 0);
+camera.position.y = 15;
+camera.lookAt(0, 0, 0.5);
 
 function animate() {
+  cube1.rotation.x += 0.01;
+  cube1.rotation.y += 0.01;
+
+  cube2.rotation.z += 0.02;
+
+  cube3.rotation.x += 0.005;
+  cube3.rotation.y += 0.015;
+
   renderer.render(scene, camera);
 }
