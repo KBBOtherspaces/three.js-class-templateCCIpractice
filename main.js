@@ -2,9 +2,9 @@ import * as THREE from "three";
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(
-  85,
+  65,
   window.innerWidth / window.innerHeight,
-  0.15,
+  0.10,
   1000
 );
 
